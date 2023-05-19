@@ -51,7 +51,7 @@ print("\nQ2b\n")
 def id_creator(name: str) -> str:
     id = ""
     for letter in name:
-        id += str(position_in_alphabet(letter.lower()))
+        id += str(position_in_alphabet(letter))
     return id
 
 
@@ -69,6 +69,7 @@ def password_creator(ID: str) -> int:
 
 
 # -------------------------------------------------------------------------------------- #
+
 
 print("\nQ3a\n")
 # Q3a: Write a function which takes an integer as an input, and returns true if the number is prime, false otherwise.
