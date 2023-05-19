@@ -1,0 +1,15 @@
+Functions are useful to prevent repeating code - DRY
+Good practises:
+    - One function should do one thing (makes it easier to unit test)
+    - Clear naming makes it easier to understand
+    - Naming convention: lowercase and underscores for spaces
+    - Not having too many arguments in a function
+    - Arguments should be clear of their need, include type hints
+    - Return statements if used by another piece of code
+    - Avoid functions that print 
+    - For function default parameters, they should go at the end
+        e.g: greeting(name, age), if name has a default parameter, age has to have a default paramerter!
+            (alternatively, switch the order of the parameters)
+    - when calling a function, you can call the paramerter name to make it clearer
+        e.g: greeting(name='bob', age=35)
+    
