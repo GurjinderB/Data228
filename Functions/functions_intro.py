@@ -74,7 +74,7 @@ print("\nQ3a\n")
 # Q3a: Write a function which takes an integer as an input, and returns true if the number is prime, false otherwise.
 
 # A3a:
-def is_prime(a) -> bool:
+def is_prime(a: int) -> bool:
     for i in range(2, a):
         if a % i == 0:
             return False
@@ -91,6 +91,7 @@ def is_prime(a) -> bool:
         if a % i == 0:
             return False
     return True
+
 
 # -------------------------------------------------------------------------------------- #
 
