@@ -40,6 +40,6 @@ class Table:
         subtotal = self.get_subtotal()
         return {'Sub Total': f'£{subtotal:.2f}', 'Service Charge': f'£{service_charge:.2f}', 'Total': f'£{total:.2f}'}     
 
-    def split_bill(self):
+    def split_bill(self) -> float:
         return round(self.get_subtotal() / self.diners, 2) 
 
