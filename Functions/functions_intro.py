@@ -6,7 +6,7 @@ print("\nQ1a\n")
 # A1a:
 def divisors(number: int) -> list:
     factors = [1]
-    for i in range(2, number):
+    for i in range(2, (number // 2) + 1):
         if number % i == 0:
             factors.append(i)
     factors.append(number)
@@ -76,21 +76,22 @@ print("\nQ3a\n")
 # Q3a: Write a function which takes an integer as an input, and returns true if the number is prime, false otherwise.
 
 # A3a:
-def is_prime(a: int) -> bool:
-    for i in range(2, a):
-        if a % i == 0:
+def is_prime(number: int) -> bool:
+    for i in range(2, (number // 2) + 1):
+        if number % i == 0:
             return False
     return True
+
 
 print("\nQ3b\n")
 # Q3b: Now add some functionality to the function which does not error if the user inputs something other than a digit
 
 # A3b:
-def is_prime(a) -> bool:
-    if not isinstance(a, int):
+def is_prime(number) -> bool:
+    if not isinstance(number, int):
         return "Input to is_prime() should be an integer"
-    for i in range(2, a):
-        if a % i == 0:
+    for i in range(2, (number // 2) + 1):
+        if number % i == 0:
             return False
     return True
 
