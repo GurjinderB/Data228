@@ -6,12 +6,12 @@ print("\nQ1a\n")
 # A1a:
 def divisors(number: int) -> list:
     factors = [1]
-    for i in range(2, (number // 2) + 1):
+    for i in range(2, number // 2 + 1):
         if number % i == 0:
             factors.append(i)
     factors.append(number)
     return factors
-
+print(divisors(46))
 
 print("\nQ1b\n")
 # Q1b: Write a function which takes in two integers as arguments and returns true if one of the numbers
@@ -77,7 +77,7 @@ print("\nQ3a\n")
 
 # A3a:
 def is_prime(number: int) -> bool:
-    for i in range(2, (number // 2) + 1):
+    for i in range(2, number // 2):
         if number % i == 0:
             return False
     return True
