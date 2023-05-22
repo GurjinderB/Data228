@@ -5,10 +5,11 @@ print("\nQ1a\n")
 
 # A1a:
 def divisors(number: int) -> list:
-    factors = []
-    for i in range(1, number + 1):
+    factors = [1]
+    for i in range(2, number):
         if number % i == 0:
             factors.append(i)
+    factors.append(number)
     return factors
 
 
@@ -32,7 +33,7 @@ def factor(a: int, b: int) -> bool:
 
 print("\nQ2a\n")
 # Q2a: write a function which takes a letter (as a string) as an input and outputs it's position in the alphabet
-# alphabet = [" ", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+# alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
 #             "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "]
 
 # A2a:
