@@ -1,0 +1,34 @@
+Classes:
+- creating a class: use the keyword *class*, followed by the name
+- name of class convention: uppercase, and multiple words start with a capital letter
+- class varialbe: within the class itself
+- class attributes, within a initialised class work differently
+- class methods: work like normal functions but contain the self keyword and are in the class itself
+- if methods are referred to, the self keyword needs to be used 
+- class and objects are not the same thing
+- objects created from clasess are called instances, called instansiation
+- instaces can do the things defined in the class 
+
+
+4 Pillars of OOP: 
+- ABSTRACTION: Process of hiding away complexity, using methods, you don't need to know
+                how every function works
+
+- Inheritance: Lets one object acquire the properties and methods of another object
+                eg: Creating an animal class and a dog class, the 
+                    dog class will acquire all of the attributes of the animal class 
+                    Animal class will be the super/parent class and Dog will be the 
+                    subclass
+
+- Polymorphism: The ability to override attributes for subclasses
+                eg: the dogs subclass will have 2 eyeds
+
+- Encapsulation: The idea of making something public or private:
+                eg: change the amount of eyes liaka has
+                    it can currently be done, but if we changed the attribute name in __init__
+                    to self._eyes, it's a 'hidden attribute' and indicates to the programmer the
+                    attribute should not be changed 
+                get and set functions are used to retrieve attributes and 
+                set changes attributes with some constraints e.g: limit for the number of eyes <classes_intro2.py>
+
+
