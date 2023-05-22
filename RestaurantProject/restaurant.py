@@ -1,22 +1,45 @@
 class Table:
 
-    def __init__(sef, diners):
+    def __init__(self, diners):
         self.diners = diners
+        self.bill = []
 
-    def order(item, price, quantity = 1):
-        pass
+    def order(self, item: str, price: float, quantity: int = 1) -> None:
+        order = {'item': item, 'price': price, 'quantity': quantity}
+        ordered_previously = False # check if item already added to bill
+        for orders in self.bill: 
+            if item == orders['item'] and price == orders['price']:
+                orders['quantity'] += quantity
+                ordered_previously = True
+                break
+        if not ordered_previously:
+            self.bill.append(order)
 
-    def remove(item, price, quantity):
-        if True:
-            return True # if items were on the bill and can be removed
-        else:
-            return False # if quantity on the bill is less than the quantity and make no changes
+
+    def remove(self, item: str, price: float, quantity: int) -> bool:
+        for i, orders in enumerate(self.bill):
+            if item == orders['item'] and price == orders['price'] and quantity <= orders['quantity']:
+                if self.bill[i]['quantity'] == quantity:
+                    self.bill.remove({'item': item, 'price': price, 'quantity': quantity})            
+                    return True 
+                else:
+                    self.bill[i]['quantity'] -= quantity
+                    return True
+            else:
+                return False # quantity < quantity on bill or price or item not on bill
         
-    def get_subtotal():
-        pass
+    def get_subtotal(self) -> float:
+        subtotal = 0
+        for item in self.bill:
+            subtotal += item['price'] * item['quantity']
+        return subtotal
 
-    def get_total():
-        pass
+    def get_total(self, tip: float = 0.10) -> dict:
+        service_charge = self.get_subtotal() * tip
+        total = self.get_subtotal() + service_charge
+        subtotal = self.get_subtotal()
+        return {'Sub Total': f'£{subtotal:.2f}', 'Service Charge': f'£{service_charge:.2f}', 'Total': f'£{total:.2f}'}     
 
-    def split_bill():
-        pass
+    def split_bill(self):
+        return round(self.get_subtotal() / self.diners, 2) 
+
