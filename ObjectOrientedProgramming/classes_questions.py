@@ -2,7 +2,7 @@ print("\nQ1a\n")
 # Q1a: Create a class which of a country (include continent, climate, language etc in the inputs)
 
 # A1a:
-class Country():
+class Country:
     def __init__(self, continent: str, climate: str, language: str):
         self.continent = continent
         self.climate = climate
@@ -103,7 +103,7 @@ print("\nQ3a\n")
 
 
 # A3a:
-class Boss(object):
+class Boss:
     def __init__(self, name, attitude, behaviour, face):
         self.name = name
         self.attitude = attitude
