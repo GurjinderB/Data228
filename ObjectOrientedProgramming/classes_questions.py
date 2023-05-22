@@ -9,6 +9,7 @@ class Country():
         self.language = language
 
 united_kingdom = Country("Europe", "varied", "English")
+print(united_kingdom.language)
 
 
 print("\nQ1b\n")
@@ -16,10 +17,12 @@ print("\nQ1b\n")
 
 # A1b:
 class City(Country):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, continent, climate, language, country):
+        super().__init__(continent, climate, language)
+        self.country = country
 
-london = City(united_kingdom)
+london = City("Europe", "varied", "English", "United Kingdom")
+print(london.country)
 
 
 # -------------------------------------------------------------------------------------- #
@@ -118,16 +121,10 @@ class Boss(object):
 
 
 class GoodBoss(Boss):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, name, attitude, behaviour, race):
+        super().__init__(name, attitude, behaviour, race)
 
     def encourage(self):
         print(f"The team cheers for {self.name}, starts shouting awesome slogans then gets back to work.")
 
 # -------------------------------------------------------------------------------------- #
-
-
-
-
-
-
