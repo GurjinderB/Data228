@@ -18,9 +18,8 @@ print("\nQ1b\n")
 class City(Country):
     def __init__(self):
         super().__init__()
-        self.is_capital_city = 3
 
-london = City()
+london = City(united_kingdom)
 
 
 # -------------------------------------------------------------------------------------- #
