@@ -122,7 +122,8 @@ class Boss:
 
 class GoodBoss(Boss):
     def __init__(self, name, attitude, behaviour, race):
-        super().__init__(name, attitude, behaviour, race)
+        super().__init__(name, attitude, behaviour)
+        self.race = race
 
     def encourage(self):
         print(f"The team cheers for {self.name}, starts shouting awesome slogans then gets back to work.")
