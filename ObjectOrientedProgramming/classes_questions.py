@@ -108,16 +108,16 @@ class Boss:
         self.name = name
         self.attitude = attitude
         self.behaviour = behaviour
-        face = face
+        self.face = face
 
     def get_attitude(self):
-        return attitude
+        return self.attitude
 
     def get_behaviour(self):
-        return behaviour
+        return self.behaviour
 
     def get_face(self):
-        return face
+        return self.face
 
 
 class GoodBoss(Boss):
