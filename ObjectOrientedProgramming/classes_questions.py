@@ -121,8 +121,8 @@ class Boss:
 
 
 class GoodBoss(Boss):
-    def __init__(self, name, attitude, behaviour, race):
-        super().__init__(name, attitude, behaviour)
+    def __init__(self, name, attitude, behaviour, face, race):
+        super().__init__(name, attitude, behaviour, face)
         self.race = race
 
     def encourage(self):

@@ -21,7 +21,7 @@ Classes:
                     subclass
 
 - Polymorphism: The ability to override attributes for subclasses
-                eg: the dogs subclass will have 2 eyeds
+                eg: the dogs subclass will have 2 eyes
 
 - Encapsulation: The idea of making something public or private:
                 eg: change the amount of eyes liaka has
