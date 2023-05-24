@@ -36,7 +36,7 @@ class Table:
     def get_total(self, tip: float = 0.10) -> dict:
         subtotal = self.get_subtotal()
         service_charge = subtotal * tip
-        total = self.get_subtotal() + service_charge
+        total = subtotal + service_charge
         return {'Sub Total': f'£{subtotal:.2f}', 
                 'Service Charge': f'£{service_charge:.2f}', 
                 'Total': f'£{total:.2f}'}
