@@ -1,0 +1,3 @@
+NumPy - arrays and matrices: https://numpy.org/
+Pandas - https://pandas.pydata.org/docs/
+
