@@ -26,7 +26,7 @@ def assign_pilot_id(starship_ids):
         response = requests.get(f"https://swapi.dev/api/starships/{starship_id}").json()
         if response['pilots']:
             pilot_ids = []
-            for i, pilot in enumerate(response['pilots']):
+            for pilot in response['pilots']:
                 response_pilot = requests.get(pilot).json()
                 name = response_pilot['name']
                 character = db.characters.find({'name': name})
